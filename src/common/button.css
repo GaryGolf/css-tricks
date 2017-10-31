@@ -1,0 +1,15 @@
+button {
+  padding: .2em .8em;
+  border: 1px outset #446d88;
+  background: #58a linear-gradient(#77a0bb, #58a); 
+  border-radius: .2em;
+  box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+  color: white;
+  text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+  font-size: 125%;
+  line-height: 1.5;
+}
+
+button.cancel {
+  background: #c00 linear-gradient(#c42, #a00);
+}
