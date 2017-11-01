@@ -13,3 +13,49 @@ button {
 button.cancel {
   background: #c00 linear-gradient(#c42, #a00);
 }
+
+.callout { 
+  background-color: InfoBackground;
+  color: InfoText;
+  border: 1px solid rgba(180,180,80,.5);
+  box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+  width: 15em;
+  padding: .4em .6em;
+  position: relative; 
+}
+.callout::before { 
+  content: "";
+  position: absolute;
+  top: -.422em; 
+  left: 1em; 
+  padding: .35em; 
+  background: inherit; 
+  border: inherit; 
+  border-right: 0; 
+  border-bottom: 0; 
+  transform: rotate(45deg);
+}
+
+button.stripes {
+  background: gray;
+  background-image: linear-gradient(90deg,rgba(200,0,0,.5) 50%, transparent 0),
+                    linear-gradient(rgba(200,0,0,.5) 50%, transparent 0); 
+  background-size: 10px 10px;
+  background-position: 2px 2px, 2px 2px;
+}
+button.polka-dot {
+  background: #655;
+  background-image: radial-gradient(tan 30%, transparent 0),
+                    radial-gradient(tan 30%, transparent 0); 
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+button.checkerboard {
+  background: gray url('data:image/svg+xml,\
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25" >\
+    <rect x="50" width="50" height="50" />\
+    <rect y="50" width="50" height="50" />\
+    </svg>');
+  background-size: 10px 10px;
+  background-position: 5px 5px, 5px 5px;
+}
