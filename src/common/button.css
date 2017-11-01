@@ -59,3 +59,34 @@ button.checkerboard {
   background-size: 10px 10px;
   background-position: 5px 5px, 5px 5px;
 }
+
+/* http://bennettfeely.com/gradients/ */
+/* prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 */
+
+button.pseudorandom-stripes {
+  background: hsl(20, 10%, 20%);
+  background-image: 
+    linear-gradient(90deg, #433 1px, transparent 0),
+    linear-gradient(90deg, #661 7px, transparent 0),
+    linear-gradient(90deg, #655 5px, transparent 0);
+  background-size: 13px 100%, 11px 100%, 7px 100%;
+}
+
+button.mail {
+  padding: 0 .8em;
+  color: black;
+	border: .2em solid transparent;
+	background: linear-gradient(white, white) padding-box,
+  repeating-linear-gradient(-45deg, red 0, red 12.5%, transparent 0, transparent 25%, 
+    #58a 0, #58a 37.5%, transparent 0, transparent 50%) 0 / 1em 1em;
+}
+
+@keyframes ants { to { background-position: 100% 100% } }
+
+button.marching-ants {
+	padding-top: calc(.2em - 1px);
+	border: 1px solid transparent;
+	background: linear-gradient(#58a,#446d88) padding-box,
+	            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .4em .4em;
+	animation: ants 12s linear infinite;
+}
