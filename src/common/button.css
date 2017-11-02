@@ -8,6 +8,7 @@ button {
   text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
   font-size: 125%;
   line-height: 1.5;
+  cursor: pointer;
 }
 
 button.cancel {
@@ -89,4 +90,25 @@ button.marching-ants {
 	background: linear-gradient(#58a,#446d88) padding-box,
 	            repeating-linear-gradient(-45deg, black 0, black 25%, transparent 0, transparent 50%) 0 / .4em .4em;
 	animation: ants 12s linear infinite;
+}
+
+button.skew {
+  position: relative;
+  border: none; 
+  margin: 0 .5em;
+  background: transparent;
+  box-shadow: 0 0 0 transparent;
+  outline: none;
+}
+
+.skew::before {
+  content: '';
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -1;
+  background: #58a linear-gradient(#77a0bb, #58a); 
+  border: 1px outset #446d88;
+  border-radius: .2em;
+  transform: skew(-30deg);
+  box-shadow: 0 .05em .25em rgba(0,0,0,.5);
 }
